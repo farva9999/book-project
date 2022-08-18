@@ -1,0 +1,87 @@
+body{
+    background-image: "wickedbackground.svg";
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 10fr);
+    grid-template-rows: repeat(5, 10fr);
+}
+
+
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    margin-left: max(50px, 30%);
+    margin-right: max(50px, 30%);
+    justify-content: space-evenly;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.textinput{
+    margin: 5px;
+    width: min(300px, 90%);
+    height: 20px;
+}
+
+.inputs > label{
+    margin: 5px;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+.readlabel{
+    text-align: center;
+    font-size: 24px;
+}
+
+.radios{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.radioOptions{
+    display: flex;
+    font-weight: bold;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+button{
+    padding: 10px;
+    font-size: 22px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+label{
+    font-size: 20px;
+}
+
+#errortext{
+    text-align: center;
+    color: red;
+    visibility: hidden;
+}
+
+p{
+    background-color: peachpuff;
+    border: 1px solid red;
+}
+
