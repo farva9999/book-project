@@ -9,8 +9,8 @@ let bookname = "empty";
 
 
 function addBookToLibrary() {
-
-    checkInputs();
+    console.log(readstatusitem);
+    //checkInputs();
 
     //define values
     let title = bookElement.value;
@@ -22,7 +22,7 @@ function addBookToLibrary() {
 
     //create div to hold book elements
     let newBookGridElement = document.createElement('div');
-    newBookGridElement.style.className = 'book';
+    newBookGridElement.className = 'book';
 
     let newBookTitle = document.createElement("p");
         newBookTitle.textContent = addedBook.title;
@@ -32,7 +32,9 @@ function addBookToLibrary() {
         newBookReadStatus.textContent = addedBook.readstatus;
 
     libraryDisplay.appendChild(newBookGridElement);
-    newBookGridElement.appendChild(newBookTitle, newBookAuthor, newBookReadStatus);
+    newBookGridElement.appendChild(newBookTitle);
+    newBookGridElement.appendChild(newBookAuthor);
+    newBookGridElement.appendChild(newBookReadStatus);
 
     myLibrary.push(addedBook);
 
@@ -60,11 +62,16 @@ function eraseLibrary() {
   allbooks.forEach((book) => book.remove());
 }
 
-function Book(title, author, readstatus) {
+function Book(title, author, readstatusin) {
   //the constructor
     this.title = title;
     this.author = author;
-    this.readstatus = readstatus;
+    if (readstatusin == 'true') {
+        this.readstatus = "Read";
+    } else {
+        this.readstatus = "Not Read";
+    }
+
 }
 
 function defaultLibraryPopulate() {

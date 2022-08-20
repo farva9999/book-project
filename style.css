@@ -5,8 +5,8 @@ body{
 
 .container{
     display: grid;
-    grid-template-columns: repeat(5, 10fr);
-    grid-template-rows: repeat(5, 10fr);
+    grid-template-columns: repeat(5, 18vw);
+    grid-template-rows: repeat(5, 18vh);
 }
 
 
@@ -80,8 +80,12 @@ label{
     visibility: hidden;
 }
 
-p{
+.book{
     background-color: peachpuff;
     border: 1px solid red;
 }
 
+.book > p {
+    text-align: center;
+    font-size: 18px;
+}
